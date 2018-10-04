@@ -111,7 +111,7 @@ namespace Sitecore.Support.Workflows.Simple
           var url = new UrlString("/sitecore/shell/-/xaml/Sitecore.Shell.Applications.ContentEditor.Dialogs.ValidationResult.aspx");
           urlHandle.Add(url);
 
-          SheerResponse.ShowModalDialog(url.ToString());
+          SheerResponse.ShowModalDialog(new ModalDialogOptions(url.ToString()) { Width = "850" });
           if (!string.IsNullOrEmpty(text))
           {
             args.AddMessage(text);
